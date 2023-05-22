@@ -16,7 +16,7 @@ export default function Logged() {
     Axios.defaults.withCredentials = true
 
     useEffect(() => {
-        Axios.get("http://localhost:3002/login").then((response) => {
+        Axios.get("https://chat-app-server-production-4db6.up.railway.app/login").then((response) => {
             if (response.data.log === true) {
                 console.log(response.data.user.name)
                 setUser(response.data.user.name)

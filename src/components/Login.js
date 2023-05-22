@@ -13,7 +13,7 @@ export default function Login() {
     Axios.defaults.withCredentials = true
 
     const onLog = () => {
-        Axios.post('http://localhost:3002/login', {
+        Axios.post('https://chat-app-server-production-4db6.up.railway.app/login', {
             username: username,
             userpassword: password,
         }).then((response) => {

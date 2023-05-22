@@ -16,7 +16,7 @@ export default function Register() {
         let uPass = passRef.current.value
 
         if (uName !== '' && uPass !== '') {
-            Axios.post('http://localhost:3002/register', {
+            Axios.post('https://chat-app-server-production-4db6.up.railway.app/register', {
                 username: uName,
                 userpassword: uPass,
             }).then((response) => {
