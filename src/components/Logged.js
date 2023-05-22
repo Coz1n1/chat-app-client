@@ -69,7 +69,7 @@ export default function Logged() {
         <>
             <div className='header-logged'>
                 <h1 className='opening-text'>Hello: {user}</h1>
-                <a href='/chatting' className='logout'>Logout</a>
+                <a href='/' className='logout'>Logout</a>
             </div>
             <div>
                 <div className='messages'>
