@@ -49,9 +49,9 @@ export default function Register() {
                 <h1 className='header'>ChatApp</h1>
                 <div className='reg-form'>
                     <h2 className='reg-header'>Create your account:</h2>
-                    <label className='label'>Usser name: </label><br></br>
+                    <label className='label'>User name: </label><br></br>
                     <input type='text' placeholder='Enter your name...' ref={nameRef} className='inp'></input><br></br>
-                    <label className='label'>Usser password: </label><br></br>
+                    <label className='label'>User password: </label><br></br>
                     <div className='pass-management'>
                         <span className='eye-icon' onClick={() => setIsActive(!isActive)}>
                             {isActive ?

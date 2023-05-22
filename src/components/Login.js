@@ -47,9 +47,9 @@ export default function Login() {
                         <h1 className='header'>ChatApp</h1>
                         <div className='log-form'>
                             <h2 className='log-header'>Login</h2>
-                            <label className='label'>Usser name: </label><br></br>
+                            <label className='label'>User name: </label><br></br>
                             <input type='text' placeholder='Enter your name...' onChange={(e) => setUsername(e.target.value)} className='inp'></input><br></br>
-                            <label className='label'>Usser password: </label><br></br>
+                            <label className='label'>User password: </label><br></br>
                             <div className='pass-management'>
                                 <span className='eye-icon' onClick={() => setIsActive(!isActive)}>
                                     {isActive ?
