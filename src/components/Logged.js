@@ -3,7 +3,7 @@ import Axios from 'axios'
 import io from 'socket.io-client'
 import ScrollToBottom from 'react-scroll-to-bottom'
 
-const socket = io.connect("http://localhost:3002")
+const socket = io.connect("https://chat-app-server-production-4db6.up.railway.app")
 
 export default function Logged() {
 
