@@ -1,0 +1,471 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    background-color: #0093E9;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h4 {
+    color: white;
+}
+
+/* Logged component */
+.header-logged {
+    display: flex;
+    flex-direction: row;
+}
+
+.opening-text {
+    font-size: 40pt;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 4rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    background-color: #4158D0;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: white;
+}
+
+.messages {
+    width: 50em;
+    height: 40em;
+    border: black solid 2px;
+    border-bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: white;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.room-label {
+    font-size: 15pt;
+}
+
+.scroll {
+    width: 50em;
+    height: 38em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.chat {
+    display: flex;
+}
+
+#author {
+    justify-content: flex-end;
+}
+
+#author .chat-message {
+    width: auto;
+    height: auto;
+    background-color: #FFCC70;
+    color: white;
+    margin-right: 1em;
+    border-radius: 5px;
+    margin-top: 1em;
+    justify-content: flex-end;
+    padding: 1em;
+}
+
+#guest {
+    justify-content: flex-start;
+}
+
+#guest .chat-message {
+    width: auto;
+    height: auto;
+    background-color: #C850C0;
+    border-color: #C850C0;
+    color: white;
+    margin-left: 1em;
+    border-radius: 5px;
+    justify-content: flex-start;
+    padding: 1em;
+}
+
+.text {
+    font-family: 'Roboto Mono', monospace;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mess-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#author .user-info {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    justify-content: flex-end;
+    margin-right: 1em;
+}
+
+#guest .user-info {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    justify-content: flex-start;
+    margin-left: 1em;
+}
+
+.hour-info {
+    color: black;
+}
+
+.user-info-name {
+    font-weight: bold;
+    margin-right: 0.3em;
+}
+
+#send {
+    width: 10em;
+    height: 5em;
+    border-bottom-right-radius: 5px;
+    border-color: black;
+    border-left: 0;
+    background-color: #4158D0;
+    color: white;
+}
+
+.room-management {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.join-room-place {
+    display: flex;
+    flex-direction: row;
+}
+
+#rButton {
+    width: 7em;
+    height: 4em;
+    border-color: black;
+    background-color: #4158D0;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#room {
+    color: black;
+    width: 20em;
+    height: 4em;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: white;
+    border-color: black;
+    border-right: 0;
+}
+
+#message-input {
+    color: #C850C0;
+    width: 50em;
+    height: 5em;
+    border-bottom-left-radius: 5px;
+    background-color: white;
+    border-color: black;
+}
+
+#leaveRoomButton {
+    width: 7em;
+    height: 4em;
+    border-color: black;
+    background-color: #4158D0;
+    color: white;
+    border-radius: 5px;
+}
+
+.messages .scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.room-management>label {
+    font-size: 1.5em;
+    margin-right: 1em;
+    font-family: 'Roboto Mono', monospace;
+}
+/**/
+
+/*Login component*/
+.login-main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vh;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.back-image {
+    width: 4em;
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+.header {
+    text-align: center;
+    font-size: 50pt;
+    color: white;
+}
+
+.log-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+    margin-top: 1em;
+    border-radius: 25px;
+}
+
+.log-header {
+    font-size: 35pt;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.3em;
+    color: black;
+}
+
+.label {
+    color: black;
+    font-size: 15pt;
+    font-weight: 600;
+}
+
+.inp {
+    color: black;
+    width: 25em;
+    height: 4em;
+    border-radius: 15px;
+    background-color: white;
+    font-size: 12pt;
+    border-color: #C850C0;
+}
+
+.pass-management {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.pass-management .eye-icon {
+    position: absolute;
+    width: 2em;
+    right: 1em;
+    top: 1em;
+    z-index: 2;
+}
+
+.pass-management .eye-icon img {
+    width: 100%;
+}
+
+.under-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+    margin-top: 2em;
+    background: none;
+    border: none;
+    font-size: 11pt;
+}
+/**/
+
+/* Register Component */
+.register-main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vh;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.reg-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+    margin-top: 1em;
+    border-radius: 25px;
+}
+
+.go-to-reg {
+    text-decoration: underline;
+    color: white;
+}
+
+.confirm {
+    color: #C850C0;
+    width: 7em;
+    height: 3em;
+    border-radius: 15px;
+    margin-bottom: 1em;
+    background-color: white;
+    font-size: 1em;
+    border-color: #C850C0;
+}
+
+.under-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+    margin-top: 2em;
+    background: none;
+    border: none;
+    font-size: 11pt;
+}
+
+.response-succeed {
+    text-decoration: none;
+    color: green;
+}
+
+.response-failed {
+    color: red;
+}
+
+.reg-header {
+    font-size: 25pt;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.1em;
+    color: black;
+}
+/**/
+
+/* Home component */
+.main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vh;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.home-main {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    width: 80em;
+    height: 40em;
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.home-picture {
+    width: 40em;
+    height: 40em;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.home-content {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Roboto Mono', monospace;
+    color: black;
+}
+/**/
+
+/* Navbar Component */
+.nav {
+    background-color: white;
+    color: #C850C0;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.nav li {
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.1em;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+
+.title {
+    font-size: 5rem;
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(233, 215, 88);
+}
+/**/
+
+/* Error Component */
+.error-page-header {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Roboto Mono', monospace;
+    color: black;
+}
+/**/
