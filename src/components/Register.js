@@ -16,7 +16,7 @@ export default function Register() {
         let uPass = passRef.current.value
 
         if (uName !== '' && uPass !== '') {
-            Axios.post('https://chat-app-server-production-4db6.up.railway.app/register', {
+            Axios.post('https://cors-anywhere.herokuapp.com/https://chat-app-server-production-4db6.up.railway.app/register', {
                 username: uName,
                 userpassword: uPass,
             }).then((response) => {

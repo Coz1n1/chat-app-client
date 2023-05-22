@@ -13,7 +13,7 @@ export default function Login() {
     Axios.defaults.withCredentials = true
 
     const onLog = () => {
-        Axios.post('https://chat-app-server-production-4db6.up.railway.app/login', {
+        Axios.post('https://cors-anywhere.herokuapp.com/https://chat-app-server-production-4db6.up.railway.app/login', {
             username: username,
             userpassword: password,
         }).then((response) => {

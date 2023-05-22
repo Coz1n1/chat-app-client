@@ -3,7 +3,7 @@ import Axios from 'axios'
 import io from 'socket.io-client'
 import ScrollToBottom from 'react-scroll-to-bottom'
 
-const socket = io.connect("https://chat-app-server-production-4db6.up.railway.app")
+const socket = io.connect("https://cors-anywhere.herokuapp.com/https://chat-app-server-production-4db6.up.railway.app")
 
 export default function Logged() {
 
@@ -16,7 +16,7 @@ export default function Logged() {
     Axios.defaults.withCredentials = true
 
     useEffect(() => {
-        Axios.get("https://chat-app-server-production-4db6.up.railway.app/login").then((response) => {
+        Axios.get("https://cors-anywhere.herokuapp.com/https://chat-app-server-production-4db6.up.railway.app/login").then((response) => {
             if (response.data.log === true) {
                 console.log(response.data.user.name)
                 setUser(response.data.user.name)
